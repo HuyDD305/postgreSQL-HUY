@@ -1,0 +1,22 @@
+-- I’ve seen all kinds of characters used as delimiters,
+--  from ampersands to pipes, but the comma is most commonly used; hence the
+-- name of a file type you’ll see often is comma-separated values (CSV). The
+-- --  terms CSV and comma-delimited are interchangeable.
+--  John,Doe,123 Main St.,Hyde Park,NY,845-555-1212
+ -- A feature you’ll often find inside a delimited text file is a header row. As the
+ -- name implies, it’s a single row at the top, or head, of the file that lists the
+ -- name of each data column. Often, a header is added when data is exported
+ -- from a database or a spreadsheet.
+ --  delimited files use an arbitrary character called a
+ -- text qualifier to enclose a column that includes the delimiter character. This
+ -- acts as a signal to ignore that delimiter and treat everything between the text
+ -- qualifiers as a single column.
+--   FIRSTNAME,LASTNAME,STREET,CITY,STATE,PHONE 
+-- John,Doe,"123 Main St., Apartment 200",Hyde Park,NY,845
+-- 555-1212
+--  Using commas as a column delimiter leads to a potential dilemma: what if
+--  the value in a column includes a comma? For example, sometimes people
+--  combine an apartment number with a street address, as in 123 Main St.,
+--  Apartment 200. Unless the system for delimiting accounts for that extra
+-- comma, during import the line will appear to have an extra column and cause
+--  the import to fail.
