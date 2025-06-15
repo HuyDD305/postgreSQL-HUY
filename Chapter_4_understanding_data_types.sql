@@ -91,8 +91,8 @@ SELECT * FROM people2;
 --  maximum number of digits to the left and right of the decimal point, and the
 --  argument scale as the number of digits allowable on the right of the decimal
 --  point.
-CREATE TABLE testing (
-	number_test numeric(5, 2)
+CREATE TABLE testing2 (
+	number_test numeric(5, 3)
 );
 
 INSERT INTO testing(number_test)
@@ -100,6 +100,10 @@ VALUES (993),
 (888);
 
 SELECT * FROM testing;
+
+INSERT INTO testing2(number_test)
+VALUES (99388.8888),
+(888.222);
  
 -- The real type allows precision to six decimal digits, and double
 --  precision to 15 decimal digits of precision
